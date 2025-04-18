@@ -1,0 +1,55 @@
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py311"
+fix = true
+unsafe-fixes = true
+
+extend-select = [
+  "E",
+  "F",
+  "I",
+  "UP",
+  "N",
+  "D",
+  "B",
+  "C4",
+  "SIM",
+  "TID",
+  "ARG",
+  "PL",
+  "RUF",
+]
+
+exclude = [
+    "venv",
+    ".venv",
+    ".git",
+    ".github",
+    "__pycache__",
+    "alembic",
+    ".idea",
+    ".pytest_cache",
+    "volume",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.isort]
+known-first-party = [
+    "bot",
+]
+combine-as-imports = true
+force-single-line = false
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+python_version = 3.11
+ignore_missing_imports = true
+strict = true
+warn_unused_ignores = true
