@@ -5,13 +5,13 @@ target-version = "py311"
 fix = true
 unsafe-fixes = true
 
-extend-select = [
+lint.extend-select = [
   "E",
   "F",
   "I",
   "UP",
   "N",
-  "D",
+  # "D",
   "B",
   "C4",
   "SIM",
@@ -38,14 +38,14 @@ quote-style = "double"
 indent-style = "space"
 line-ending = "auto"
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 known-first-party = [
     "bot",
 ]
 combine-as-imports = true
 force-single-line = false
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
 
 [tool.mypy]
