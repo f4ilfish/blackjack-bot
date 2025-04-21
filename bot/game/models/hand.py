@@ -3,8 +3,8 @@ from bot.game.models.constants import BLACK_JACK_HAND_VALUE, INIT_TURN_CARD_COUN
 
 
 class Hand:
-    def __init__(self) -> None:
-        self.cards: list[Card] = []
+    def __init__(self, cards: list[Card] | None = None) -> None:
+        self.cards = cards or []
 
     def add_card(self, card: Card) -> None:
         self.cards.append(card)
