@@ -9,7 +9,7 @@ from sqlalchemy import (
     UniqueConstraint,
 )
 
-from bot.db.registry import metadata
+from bot.database.registry import metadata
 
 player_state_table = Table(
     'player_state',
