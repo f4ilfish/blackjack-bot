@@ -1,8 +1,8 @@
 from sqlalchemy import and_, false, select, true
 from sqlalchemy.orm import column_property, relationship
 
-from bot.db.registry import mapper_registry
-from bot.db.tables import (
+from bot.database.registry import mapper_registry
+from bot.database.tables import (
     card_table,
     game_session_player_table,
     game_session_table,
