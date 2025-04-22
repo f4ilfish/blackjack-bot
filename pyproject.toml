@@ -21,7 +21,7 @@ lint.extend-select = [
   "RUF",
 ]
 
-lint.ignore = ["PLR0913"]
+lint.ignore = ["PLR0913", "E402"]
 
 exclude = [
     "venv",
