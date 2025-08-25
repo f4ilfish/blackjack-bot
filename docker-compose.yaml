@@ -1,13 +1,33 @@
 services:
-  db:
+  postgres:
     image: postgres:latest
-    container_name: bj-postgres
+    container_name: postgres
     env_file:
       - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      - blackjack-network
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    env_file:
+      - .env
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin/data
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - blackjack-network
 
 volumes:
   postgres_data:
+  pgadmin_data:
+
+networks:
+  blackjack-network:
+    driver: bridge

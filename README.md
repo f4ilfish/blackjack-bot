@@ -19,3 +19,7 @@ pre-commit install
 ```bash
 python3 -m bot.main
 ```
+5. Run db in container
+```bash
+docker compose up -d
+```
