@@ -23,3 +23,11 @@ python3 -m bot.main
 ```bash
 docker compose up -d
 ```
+6. Generate migrations
+```bash
+alembic revision --autogenerate -m "Init migration"
+```
+7. Upgrade migration
+```bash
+alembic upgrade head
+```
