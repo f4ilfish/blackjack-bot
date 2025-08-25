@@ -86,7 +86,7 @@ card = Table(
     Column("rank", String(2), nullable=False),
     CheckConstraint("LENGTH(suit) = 1", "ck_suit"),
     CheckConstraint("LENGTH(rank) >= 1 AND LENGTH(suit) <= 2", "ck_rank"),
-    UniqueConstraint("suit", "rank", "uq_ck_suit_rank"),
+    UniqueConstraint("suit", "rank"),
 )
 
 hand = Table(
