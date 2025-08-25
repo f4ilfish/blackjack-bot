@@ -1,4 +1,5 @@
 aiohttp~=3.11.18
 alembic~=1.15.2
-PyYAML~=6.0.2
+asyncpg~=0.30.0
+python-dotenv~=1.1.1
 sqlalchemy~=2.0.40
