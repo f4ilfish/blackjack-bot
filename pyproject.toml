@@ -11,7 +11,7 @@ lint.extend-select = [
   "I",
   "UP",
   "N",
-  # "D",
+  # "D", disabled pydocstyle
   "B",
   "C4",
   "SIM",
@@ -21,7 +21,7 @@ lint.extend-select = [
   "RUF",
 ]
 
-lint.ignore = ["PLR0913", "E402"]
+lint.ignore = ["PLR0913", "E402", "RUF003"]
 
 exclude = [
     "venv",
@@ -41,9 +41,7 @@ indent-style = "space"
 line-ending = "auto"
 
 [tool.ruff.lint.isort]
-known-first-party = [
-    "bot",
-]
+known-first-party = ["bot"]
 combine-as-imports = true
 force-single-line = false
 
